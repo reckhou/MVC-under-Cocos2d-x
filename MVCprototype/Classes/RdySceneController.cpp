@@ -23,6 +23,12 @@ bool RdySceneController::init()
   return true;
 }
 
+RdySceneController::~RdySceneController()
+{
+  RdySceneModel_->cleanUp();
+  RdySceneModel_->release();
+}
+
 void RdySceneController::testViewDelegate()
 {
   CCLog("testViewDelegate!!!");
@@ -40,12 +46,7 @@ void RdySceneController::update()
   {
     gCount = 0;
     CCLog("replace!");
-    cleanUp(); // is it a good solution?
     CCDirector::sharedDirector()->replaceScene(RdySceneController::node());
   }
 }
 
-void RdySceneController::cleanUp()
-{
-  RdySceneModel_->release();
-}

@@ -29,3 +29,8 @@ void RdySceneModel::update()
 //  CCLog("Model ref count: %d", retainCount());
   ObserverObj_->testModelDelegate();
 }
+
+void RdySceneModel::cleanUp()
+{
+  
+}

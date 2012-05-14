@@ -22,6 +22,7 @@ public:
   static RdySceneModel* model();
   void init(RdySceneModelDelegate* pDelegate);
   void update();
+  void cleanUp();
   
 private:
   RdySceneModelDelegate* ObserverObj_;

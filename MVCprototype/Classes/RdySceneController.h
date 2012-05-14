@@ -21,7 +21,7 @@ class RdySceneController : public CCScene, public RdySceneViewDelegate
 private:
   virtual bool init();
   void update();
-  void cleanUp();
+  ~RdySceneController();
   
 private:
   // need to save "view" & "model"'s object pointer here 'cause the "controller" is the entry point.
