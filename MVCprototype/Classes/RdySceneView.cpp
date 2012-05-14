@@ -24,7 +24,6 @@ bool RdySceneView::init(RdySceneViewDelegate* pDelegate, RdySceneModel* pModel)
   ObserverDelegate_ = pDelegate;
   
   pModel->init(this);
-  pModel->retain(); // need to retain here or will be released by engine.
 
   return true;
 }

@@ -14,6 +14,7 @@ RdySceneModel* RdySceneModel::model()
 {
   RdySceneModel* pModel = new RdySceneModel();
   pModel->autorelease();
+  pModel->retain();
   
   return pModel;
 }
