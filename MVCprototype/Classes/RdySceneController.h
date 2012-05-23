@@ -12,8 +12,7 @@
 #include "RdySceneView.h"
 #include "RdySceneModel.h"
 #include "RdySceneViewDelegate.h"
-
-using namespace cocos2d;
+#include "GlobalDef.h"
 
 // Have to inherit CCScene here because of C++'s lack of type (id)
 class RdySceneController : public CCScene, public RdySceneViewDelegate

@@ -6,7 +6,6 @@
 //  Copyright (c) 2012年 Pinidea. All rights reserved.
 //
 
-#include <iostream>
 #include "RdySceneModel.h"
 #include "RdySceneView.h"
 
@@ -21,13 +20,13 @@ RdySceneModel* RdySceneModel::model()
 
 void RdySceneModel::init(RdySceneModelDelegate* pDelegate)
 {
-  ObserverObj_ = pDelegate;
+  ObserverDelegate_ = pDelegate;
 }
 
 void RdySceneModel::update()
 {
 //  CCLog("Model ref count: %d", retainCount());
-  ObserverObj_->testModelDelegate();
+  ObserverDelegate_->testModelDelegate();
 }
 
 void RdySceneModel::cleanUp()

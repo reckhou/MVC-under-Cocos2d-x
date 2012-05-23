@@ -10,9 +10,7 @@
 #define MVCprototype_RdySceneModel_h
 
 #include "RdySceneModelDelegate.h"
-#include "cocos2d.h"
-
-USING_NS_CC;
+#include "GlobalDef.h"
 
 class RdySceneViewDelegate;
 
@@ -25,7 +23,7 @@ public:
   void cleanUp();
   
 private:
-  RdySceneModelDelegate* ObserverObj_;
+  RdySceneModelDelegate* ObserverDelegate_;
 };
 
 #endif

@@ -142,6 +142,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8B91AEC9156CE6B8004F43DA /* GlobalDef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GlobalDef.h; path = Classes/GlobalDef.h; sourceTree = "<group>"; };
 		8B980000155A5FCE008F0296 /* CCParticleExamples.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CCParticleExamples.h; path = libs/cocos2dx/include/CCParticleExamples.h; sourceTree = "<group>"; };
 		8B980001155A5FCE008F0296 /* CCParticleSystem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CCParticleSystem.h; path = libs/cocos2dx/include/CCParticleSystem.h; sourceTree = "<group>"; };
 		8B980002155A5FCE008F0296 /* CCParticleSystemPoint.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CCParticleSystemPoint.h; path = libs/cocos2dx/include/CCParticleSystemPoint.h; sourceTree = "<group>"; };
@@ -761,6 +762,7 @@
 				8B98012A155A6200008F0296 /* Controller */,
 				8B980118155A5FD0008F0296 /* AppDelegate.h */,
 				8B980119155A5FD0008F0296 /* AppDelegate.cpp */,
+				8B91AEC9156CE6B8004F43DA /* GlobalDef.h */,
 			);
 			name = Classes;
 			sourceTree = "<group>";

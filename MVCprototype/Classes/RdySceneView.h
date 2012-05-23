@@ -9,36 +9,10 @@
 #ifndef MVCprototype_RdySceneView_h
 #define MVCprototype_RdySceneView_h
 
-#include "cocos2d.h"
 #include "RdySceneModel.h"
 #include "RdySceneViewDelegate.h"
 #include "RdySceneModelDelegate.h"
-
-USING_NS_CC;
-
-#define LAYER_NODE_FUNC_DOUBLE_PARAM(layer,__PARAMTYPE1__,__PARAM1__,__PARAMTYPE2__,__PARAM2__) \
-static layer* node(__PARAMTYPE1__ __PARAM1__,__PARAMTYPE2__ __PARAM2__) \
-{ \
-layer *pRet = new layer(); \
-if (pRet && pRet->init(__PARAM1__,__PARAM2__)) \
-{ \
-pRet->autorelease(); \
-return pRet; \
-} \
-else \
-{ \
-delete pRet; \
-pRet = NULL; \
-return NULL; \
-} \
-}; 
-
-#define VIEW_FUNC_ONEXIT \
-virtual void onExit() { \
-CCSpriteFrameCache::sharedSpriteFrameCache()->purgeSharedSpriteFrameCache(); \
-CCSpriteFrameCache::sharedSpriteFrameCache()->removeSpriteFrames(); \
-CCLayer::onExit(); \
-}; 
+#include "GlobalDef.h"
 
 // Have to inherit CCLayer here because of C++'s lack of type (id)
 class RdySceneView : public CCLayer, public RdySceneModelDelegate
