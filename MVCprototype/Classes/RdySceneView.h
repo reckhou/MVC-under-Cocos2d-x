@@ -33,6 +33,13 @@ return NULL; \
 } \
 }; 
 
+#define VIEW_FUNC_ONEXIT \
+virtual void onExit() { \
+CCSpriteFrameCache::sharedSpriteFrameCache()->purgeSharedSpriteFrameCache(); \
+CCSpriteFrameCache::sharedSpriteFrameCache()->removeSpriteFrames(); \
+CCLayer::onExit(); \
+}; 
+
 // Have to inherit CCLayer here because of C++'s lack of type (id)
 class RdySceneView : public CCLayer, public RdySceneModelDelegate
 {
@@ -40,7 +47,8 @@ class RdySceneView : public CCLayer, public RdySceneModelDelegate
 public:
 	LAYER_NODE_FUNC_DOUBLE_PARAM(RdySceneView, RdySceneViewDelegate*, pDelegate,
                                RdySceneModel*, pModel);
-  RdySceneViewDelegate* getObserver(); // not necessary, just a shortcut.
+  
+  VIEW_FUNC_ONEXIT;
   
   // implement delegate method here, treat "model" as its observer.
   virtual void testModelDelegate(); 

@@ -28,11 +28,6 @@ bool RdySceneView::init(RdySceneViewDelegate* pDelegate, RdySceneModel* pModel)
   return true;
 }
 
-RdySceneViewDelegate* RdySceneView::getObserver()
-{
-  return ObserverDelegate_;
-}
-
 void RdySceneView::testModelDelegate()
 {
   CCLog("TestModelDelegate!!");
