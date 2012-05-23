@@ -18,6 +18,7 @@ static modelName* model() \
 { \
 modelName* pModel = new modelName(); \
 pModel->autorelease(); \
+pModel->retain(); \
 return pModel; \
 };
 

@@ -17,7 +17,7 @@ class RdySceneViewDelegate;
 class RdySceneModel : public CCObject
 {
 public:
-  static RdySceneModel* model();
+  MODEL_CREATE_FUNCTION(RdySceneModel); 
   void init(RdySceneModelDelegate* pDelegate);
   void update();
   void cleanUp();

@@ -9,15 +9,6 @@
 #include "RdySceneModel.h"
 #include "RdySceneView.h"
 
-RdySceneModel* RdySceneModel::model()
-{
-  RdySceneModel* pModel = new RdySceneModel();
-  pModel->autorelease();
-  pModel->retain();
-  
-  return pModel;
-}
-
 void RdySceneModel::init(RdySceneModelDelegate* pDelegate)
 {
   ObserverDelegate_ = pDelegate;
